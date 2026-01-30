@@ -1,346 +1,57 @@
-/* =========================
-   RESET GENERAL
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+<a href="#principal" class="skip-link">Saltar al contenido principal</a>
 
-/* =========================
-   HERO (PRIMERA SECCIÓN)
-========================= */
-.hero {
-  background-image: url("img/comida.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+<nav class="nav-principal">
+    <a href="index.html">Inicio</a>
+    <a href="categorias.html">Categorías</a>
+</nav>
 
-  min-height: 100vh;
+<!-- SECCIÓN PRINCIPAL (PORTADA) -->
+<div class="hero" id="principal">
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    <h1>APRENDE A COCINARCON NOSOTROS</h1>
 
-  padding: 20px;
-  color: white;
-  text-align: center;
+    <p>Descubre recetas deliciosas y fáciles de preparar</p>
+    <p>Estás listo para comenzar?</p>
 
-  position: relative;
-}
+    <a href="categorias.html" class="btn">Vamos a cocinar</a>
 
-.hero h1 {
-  font-size: 60px;
-  margin-bottom: 20px;
-}
+    <!-- QUIÉNES SOMOS DENTRO DEL HERO -->
+    <section class="quienes-somos">
+        <details>
+            <summary>¿Quiénes somos?</summary>
 
-.hero p {
-  font-size: 22px;
-  max-width: 500px;
-  margin-bottom: 30px;
-}
+            <p>
+                Somos una comunidad apasionada por la cocina, dedicada a compartir
+                recetas fáciles, deliciosas y al alcance de todos.
+            </p>
 
-/* =========================
-   BOTÓN GENERAL
-========================= */
-.btn {
-  text-decoration: none;
-  background-color: #ff9800;
-  color: white;
-  padding: 18px 45px;
-  font-size: 22px;
-  border-radius: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
+            <p>
+                Nuestro objetivo es inspirarte a cocinar en casa y disfrutar
+                cada preparación.
+            </p>
+        </details>
+    </section>
 
-.btn:hover {
-  background-color: #ee6f08;
-}
+</div>
 
-/* =========================
-   NAVEGACIÓN
-========================= */
-.nav-principal {
-  position: absolute;
-  top: 20px;
-  left: 40px;
+<!-- FOOTER -->
+<footer class="autor">
+    <p>Desarrollado por</p>
+    <p> Edwin Hernandez Vega</p>
+    <p>Sebastián correa rojas</p> 
+    <p>Nicolás velandia Rocha   </p>   
 
-  display: flex;
-  gap: 20px;
-  z-index: 10;
-}
+</footer>
 
-.nav-principal a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  background: rgba(0, 0, 0, 0.45);
-  padding: 8px 16px;
-  border-radius: 20px;
-}
-
-.nav-principal a:hover {
-  background: rgba(255, 255, 255, 0.85);
-  color: #000;
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}
-
-/* =========================
-   ACCESIBILIDAD
-========================= */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 10px;
-  background: #000;
-  color: #fff;
-  padding: 10px;
-  text-decoration: none;
-  z-index: 1000;
-}
-
-.skip-link:focus {
-  top: 10px;
-}
-
-/* =========================
-   SECCIÓN CATEGORÍAS
-========================= */
-.categorias {
-  background-image: url("img/fondo dos.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  min-height: 100vh;
-  padding: 100px 40px;
-  text-align: center;
-  color: white;
-}
-
-.categorias h1,
-.categorias h2 {
-  font-size: 60px;
-  margin-bottom: 60px;
-}
-
-.lista-categorias {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* =========================
-   TARJETAS CATEGORÍAS
-========================= */
-.card {
-  position: relative;
-  width: 220px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 15px;
-  display: block;
-}
-
-.card span {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  background: rgba(0,0,0,0.6);
-  padding: 6px 15px;
-  border-radius: 10px;
-}
-
-/* =========================
-   SECCIÓN RECETAS
-========================= */
-.recetas {
-  background-image: url("img/fondo dos.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 60px 40px;
-}
-
-.recetas h2 {
-  text-align: center;
-  color: white;
-  margin-bottom: 60px;
-  font-size: 52px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* =========================
-   POSTRES
-========================= */
-.POSTRES {
-  background-image: url("img/FONDO POSTRES.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 60px 40px;
-}
-
-/* =========================
-   GRID RECETAS
-========================= */
-.recetas-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  justify-items: center;
-}
-
-/* =========================
-   TARJETA RECETA
-========================= */
-.receta-item {
-  background: white;
-  width: 100%;
-  max-width: 550px;
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  margin-bottom: 50px;
-}
-
-.receta-item img {
-  width: 180px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* =========================
-   DETAILS / SUMMARY
-========================= */
-details {
-  flex: 1;
-}
-
-summary {
-  text-align: center;
-  font-weight: 700;
-  font-size: 18px;
-  cursor: pointer;
-  list-style: none;
-  padding-top: 10px;
-}
-
-summary::marker {
-  display: none;
-}
-
-/* =========================
-   CONTENIDO DESPLEGABLE
-========================= */
-.receta-contenido {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.ingredientes,
-.preparacion {
-  flex: 1;
-}
-
-details[open] summary {
-  margin-bottom: 15px;
-}
-
-/* =========================
-   BOTÓN VOLVER
-========================= */
-.contenedor-boton {
-  margin-top: auto;
-  padding: 40px 0;
-  display: flex;
-  justify-content: center;
-}
-
-/* =========================
-   QUIÉNES SOMOS
-========================= */
-.quienes-somos {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.45);
-  border-radius: 15px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-  .recetas-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================
-   AUTOR
-========================= */
-.autor {
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-/* ==================================================
-   🔧 ARREGLO SOLO PARA "SELECCIONE UNA RECETA"
-   (NO rompe estructura / NO fondo oscuro)
-================================================== */
-.categorias h2 {
-  text-align: center;
-  font-size: 64px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-
-  margin: 0 auto 80px;
-  width: 100%;
-
-  background: none;
-  padding: 0;
-}
+</body>
+</html>
