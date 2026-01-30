@@ -394,7 +394,7 @@ details[open] summary {
    AJUSTE TÍTULO "SELECCIONE UNA RECETA"
    POSTRES - SOLO ESTILO, SIN ESTRUCTURA
 ========================================= */
-.POSTRES h1 {
+.POSTRES h2 {
   text-align: center;
   width: 100%;
   margin: 0 auto 80px;
@@ -406,5 +406,6 @@ details[open] summary {
   background: none;
   align-self: center;
   }
+
 
 
